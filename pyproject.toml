@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "mvp-analise-de-dados"
+version = "0.1.0"
+description = ""
+authors = ["Lucas Siqueira <siqueiraq@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+pandas = "^2.2.2"
+polars = "^1.6.0"
+seaborn = "^0.13.2"
+matplotlib = "^3.9.2"
+scikit-learn = "^1.5.1"
+numpy = "^2.1.1"
+pyarrow = "^17.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.2.5"
+ipykernel = "^6.29.5"
+ipywidgets = "^8.1.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+preview = true
+select = [
+  "I",
+  "F",
+  "E",
+  "W",
+  "N",
+  "PL",
+  "PT",
+  "ANN",
+  "Q",
+  "ARG",
+  "PD",
+  "NPY",
+  "FAST",
+  "RUF",
+  "PERF",
+]
+ignore = ["PLR0913", "PLR0917", "PD901"]
+
+[tool.ruff.format]
+preview = true
+quote-style = "double"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 120
